@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阿美素食 | 彰化陳稜路老店 - 手工素圓與在地美味</title>
-    <meta name="description" content="彰化市陳稜路『阿美素食』，深受老人與年輕人喜愛的在地老店。提供手工香菇素圓、意麵與酥炸豆包。農曆過年起微調售價，歡迎電話預訂。">
+    <title>阿美素食 | 彰化陳稜路老店 - 菜單與營業資訊</title>
+    <meta name="description" content="阿美素食最新菜單與公告：價格已於2026年農曆過年調整。提供手工香菇素圓、炸豆包等在地美味。">
     <link rel="stylesheet" href="style.css">
-    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -15,12 +14,9 @@
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "陳稜路 231 號",
-        "addressLocality": "彰化市",
-        "addressRegion": "彰化縣",
-        "postalCode": "500"
+        "addressLocality": "彰化市"
       },
-      "telephone": "+886-4-7286495",
-      "openingHours": "Mo,Tu,Th,Fr,Sa,Su 10:00-19:30"
+      "telephone": "+886-4-7286495"
     }
     </script>
 </head>
@@ -35,19 +31,34 @@
         </ul>
     </nav>
 
-    <div class="container">
-        <h1>彰化陳稜路的素食店</h1>
-        
-        <div class="notice-box">
-            <p><strong>📢 公告：</strong>素圓為香菇內餡</p>
-            <p>農曆過年起無買十送一優惠，並將微調售價</p>
+    <div class="container" id="main-content">
+        <div style="text-align: right; margin-bottom: 10px;">
+            <button onclick="toggleFontSize()" style="background: #eee; border: 1px solid #ccc; padding: 5px 10px; border-radius: 5px; cursor: pointer;">🔍 A+ 大字模式</button>
         </div>
 
-        <p style="text-align:center; font-size: 1.1rem;">每日 10:00 – 19:30 (週三公休)</p>
+        <h1>彰化陳稜路的素食店</h1>
         
-        <a href="tel:047286495" class="call-btn">📞 撥打電話訂餐</a>
+        <div class="notice-box" style="background: #fff5f5; border: 1px solid #ffcccc; padding: 15px; border-radius: 10px; color: #d63031; text-align: center;">
+            <p><strong>📢 公告：價格已調整</strong></p>
+            <p>素圓為手工香菇內餡，目前取消買十送一優惠</p>
+        </div>
 
-        <p style="text-align:center; color: #666;">推薦品項：香菇素圓、酥炸豆包、意麵</p>
+        <p style="text-align:center; margin: 20px 0;">每日 10:00 – 19:30 (週三公休)</p>
+        <a href="tel:047286495" class="call-btn" style="display: block; background: #2d5a27; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold;">📞 撥打電話訂餐</a>
     </div>
+
+    <script>
+        function toggleFontSize() {
+            const body = document.body;
+            body.classList.toggle('large-font');
+            const btn = event.target;
+            btn.innerText = body.classList.contains('large-font') ? '🔍 A- 標準模式' : '🔍 A+ 大字模式';
+        }
+    </script>
+    
+    <style>
+        .large-font p, .large-font span, .large-font div, .large-font h1 { font-size: 1.3em !important; line-height: 1.6; }
+        .large-font .call-btn { font-size: 1.5rem !important; }
+    </style>
 </body>
 </html>
