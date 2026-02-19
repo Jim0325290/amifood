@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美味菜單 - 阿美素食</title>
+    <title>最新菜單 - 阿美素食</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="menu-page">
     <div class="container">
+        <div style="text-align: right; margin-bottom: 10px;">
+            <button onclick="document.body.classList.toggle('large-font')" style="background: #eee; border: 1px solid #ccc; padding: 8px; border-radius: 5px;">🔍 老花/大字模式</button>
+        </div>
+
         <h2 style="text-align:center; color:#2d5a27;">美味菜單</h2>
 
-        <div class="menu-category">🍜 麵類系列</div>
-        <div class="menu-item"><span>湯 (乾) 麵</span><strong>$40</strong></div>
-        <div class="menu-item"><span>意麵 / 米粉 / 麵線</span><strong>$40</strong></div>
-        <div class="menu-item"><span>刀削麵</span><strong>$45</strong></div>
-        <div class="menu-item"><span>香椿麵</span><strong>$50</strong></div>
-        <div class="menu-item"><span>麻醬麵</span><strong>$55</strong></div>
-        <div class="menu-item"><span>什錦麵</span><strong>$90</strong></div>
+        <div class="menu-category" style="background:#2d5a27; color:white; padding:10px; border-radius:5px;">🍜 麵類系列</div>
+        <div class="menu-item"><span>湯(乾)麵 / 意麵 / 米粉 / 麵線</span><strong>$45</strong></div>
+        <div class="menu-item"><span>刀削麵</span><strong>$50</strong></div>
+        <div class="menu-item"><span>香椿/麻醬/什錦麵(湯)</span><strong>$55~$90</strong></div>
 
-        <div class="menu-category">🥗 精選小菜</div>
-        <div class="menu-item"><span>豆包</span><strong>$20</strong></div>
-        <div class="menu-item"><span>素肉飯</span><strong>$30</strong></div>
-        <div class="menu-item"><span>燙青菜</span><strong>$35</strong></div>
-        <div class="menu-item"><span>素圓 (手工香菇內餡)</span><strong>$40</strong></div>
+        <div class="menu-category" style="background:#2d5a27; color:white; padding:10px; border-radius:5px; margin-top:15px;">🥣 湯品與小菜</div>
+        <div class="menu-item"><span>各式湯品 (豆腐/豆包/菜頭等)</span><strong>$35</strong></div>
+        <div class="menu-item"><span>素肉飯</span><strong>$35</strong></div>
+        <div class="menu-item"><span>素圓 (手工香菇)</span><strong>$40</strong></div>
 
-        <div class="menu-category">🥣 熱騰騰湯品</div>
-        <div class="menu-item"><span>豆腐湯 / 豆雞湯 / 豆皮湯 / 豆包湯 / 菜頭湯</span><strong>$30</strong></div>
-        <div class="menu-item"><span>什錦湯</span><strong>$50</strong></div>
-
-        <div class="menu-category">🥡 外帶大量訂購</div>
-        <div class="menu-item"><span>豆包 (10入)</span><strong>$200</strong></div>
-        <div class="menu-item"><span>涼圓 (10入)</span><strong>$300</strong></div>
+        <div class="menu-category" style="background:#2d5a27; color:white; padding:10px; border-radius:5px; margin-top:15px;">🥡 外帶大量</div>
         <div class="menu-item"><span>素圓 (10入)</span><strong>$400</strong></div>
-
-        <a href="tel:047286495" class="call-btn">📞 立即電話訂餐</a>
     </div>
+
+    <style>
+        .menu-item { display: flex; justify-content: space-between; padding: 12px; border-bottom: 1px solid #eee; background: white; }
+        .large-font .menu-item { font-size: 1.4rem; padding: 18px; }
+        .large-font .menu-category { font-size: 1.5rem; }
+    </style>
 </body>
 </html>
