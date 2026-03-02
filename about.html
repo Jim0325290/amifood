@@ -3,118 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於阿美素食 - 傳承手作的溫度</title>
-    <link rel="stylesheet" href="style.css">
+    <title>關於阿美素食 - 品牌故事</title>
     <style>
-        .about-hero {
-            width: 100%;
-            height: 220px;
-            background: #e9ecef;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            overflow: hidden;
-            /copy_C6F1EC55-A830-4D2A-B354-3ED0D49B83CA.jpeg/
-            background-image: url('shop-front.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
-        .philosophy-section {
-            padding: 10px 5px;
-        }
-        .highlight-bar {
-            background: #2d5a27;
-            color: white;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        .story-text {
-            font-size: 1.05rem;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .quality-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 25px 0;
-        }
-        .quality-card {
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            background: #fff;
-        }
-        .quality-card i {
-            font-size: 1.5rem;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .quality-card h4 {
-            color: #2d5a27;
-            margin-bottom: 5px;
-        }
-        .quality-card p {
-            font-size: 0.85rem;
-            color: #777;
-        }
+        /* 基本樣式 */
+        body { font-family: sans-serif; line-height: 1.6; background: #f9f9f9; padding: 15px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        .capy-img { width: 100%; max-width: 300px; display: block; margin: 20px auto; border-radius: 10px; }
+        .btn-large { background: #eee; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; float: right; }
+        
+        /* 大字模式 */
+        .large-font .about-content { font-size: 1.4rem; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">阿美素食</a>
-        <ul>
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="menu.html">菜單</a></li>
-            <li><a href="location.html">導航</a></li>
-            <li><a href="about.html">關於</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <h2>關於我們</h2>
+        <button class="btn-large" onclick="document.body.classList.toggle('large-font')">🔍 A+ 大字模式</button>
         
-        <div class="about-hero">
+        <div class="about-content">
+            <h2 style="color: #2d5a27;">關於我們</h2>
+            
+            <img src="copy_C6F1EC55-A830-4D2A-B354-3ED0D49B83CA.jpeg" alt="阿美素食水豚店長" class="capy-img">
+            
+            <p>在彰化陳稜路，阿美素食堅持手工製作，守護在地人的胃。從一顆香菇素圓開始，我們希望把這份溫暖傳遞給每一位來訪的客人。</p>
+            
+            <h3 style="color: #2d5a27;">店長的話</h3>
+            <div style="border: 2px solid #2d5a27; padding: 15px; border-radius: 10px;">
+                <p>不要能訂你⋯我們青菜紉羹庵各好豆包慧序！大是必請喔！</p>
             </div>
-
-        <div class="philosophy-section">
-            <div class="highlight-bar">陳稜路上的真材實料</div>
-            <p class="story-text">
-                阿美素食座落於彰化市陳稜路，多年來我們始終堅持「簡單、純粹、健康」的理念。我們相信，最好的味道來自於食材本身的新鮮，以及那份不投機取巧的職人心情。
-            </p>
-
-            <div class="quality-grid">
-                <div class="quality-card">
-                    <h4>🖐️ 手工製作</h4>
-                    <p>招牌素圓每日限量手工包製，改用香菇入餡，香氣更具層次。</p>
-                </div>
-                <div class="quality-card">
-                    <h4>🥬 產地直送</h4>
-                    <p>嚴選當日採收鮮綠蔬菜，簡單川燙即能品嚐自然的鮮甜。</p>
-                </div>
-                <div class="quality-card">
-                    <h4>🍳 獨門素燥</h4>
-                    <p>慢火熬煮的素肉燥，無添加人工色素，是意麵靈魂所在。</p>
-                </div>
-                <div class="quality-card">
-                    <h4>🏠 家的溫度</h4>
-                    <p>平實的價格、親切的服務，讓每一位客人都能吃得自在飽足。</p>
-                </div>
-            </div>
-
-            <p class="story-text">
-                為了追求更好的食材品質，我們專注於每一道餐點的細節。雖然過年起取消「買十送一」的優惠活動，但我們將這份資源回饋在更優質的選料上。感謝老顧客們長久以來的支持，阿美素食會繼續守護這份屬於彰化的在地滋味。
-            </p>
         </div>
-
-        <a href="tel:047286495" class="call-btn">電話預約訂餐</a>
     </div>
-
-    <footer>© 2026 阿美素食 | 彰化市陳稜路 231 號</footer>
 </body>
 </html>
