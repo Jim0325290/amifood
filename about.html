@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於阿美素食 - 品牌故事</title>
+    <title>關於我們 - 阿美素食</title>
     <style>
-        /* 基本樣式 */
-        body { font-family: sans-serif; line-height: 1.6; background: #f9f9f9; padding: 15px; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-        .capy-img { width: 100%; max-width: 300px; display: block; margin: 20px auto; border-radius: 10px; }
-        .btn-large { background: #eee; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; float: right; }
+        /* 統一風格樣式 */
+        body { font-family: -apple-system, sans-serif; margin: 0; background: #f8f9fa; color: #333; transition: 0.3s; }
         
-        /* 大字模式 */
-        .large-font .about-content { font-size: 1.4rem; }
+        /* 導覽區 (與菜單頁一致) */
+        nav { background: #2d5a27; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 1.1rem; }
+        
+        .container { max-width: 500px; margin: 20px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+        /* 字體放大按鈕 */
+        .zoom-control { text-align: center; margin-bottom: 20px; }
+        .zoom-btn { background: #e74c3c; color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: bold; }
+
+        /* 內容樣式 */
+        .capy-img { width: 100%; border-radius: 10px; margin: 15px 0; }
+        .story-text { line-height: 1.8; font-size: 1.1rem; }
+        
+        /* 大字模式切換 */
+        .large-font .story-text { font-size: 1.5rem; }
+        .large-font h2 { font-size: 2rem; }
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="menu.html">菜單</a>
+        <a href="location.html">導航</a>
+        <a href="about.html">關於</a>
+    </nav>
+
     <div class="container">
-        <button class="btn-large" onclick="document.body.classList.toggle('large-font')">🔍 A+ 大字模式</button>
-        
-        <div class="about-content">
-            <h2 style="color: #2d5a27;">關於我們</h2>
-            
-            <img src="copy_C6F1EC55-A830-4D2A-B354-3ED0D49B83CA.jpeg" alt="阿美素食水豚店長" class="capy-img">
-            
+        <div class="zoom-control">
+            <button class="zoom-btn" onclick="document.body.classList.toggle('large-font')">🔍 點我切換大字模式</button>
+        </div>
+
+        <h2 style="text-align:center; color: #2d5a27;">關於阿美素食</h2>
+
+        <img src="copy_C6F1EC55-A830-4D2A-B354-3ED0D49B83CA.jpeg" alt="阿美素食店長照片" class="capy-img">
+
+        <div class="story-text">
             <p>在彰化陳稜路，阿美素食堅持手工製作，守護在地人的胃。從一顆香菇素圓開始，我們希望把這份溫暖傳遞給每一位來訪的客人。</p>
             
-            <h3 style="color: #2d5a27;">店長的話</h3>
-            <div style="border: 2px solid #2d5a27; padding: 15px; border-radius: 10px;">
-                <p>「歡迎來到阿美素食！我們的豆包和素圓都是手工製作的，堅持新鮮與健康，水豚店長強力推薦，大家一定要來嚐嚐看喔！」</p>
-            </div>
+            <p style="background: #fef5e7; padding: 15px; border-radius: 8px; border-left: 5px solid #e67e22;">
+                <strong>店長的話：</strong><br>
+                歡迎來到阿美素食！我們的豆包和素圓都是手工製作的，堅持新鮮與健康，大家一定要來嚐嚐看喔！
+            </p>
         </div>
     </div>
+
 </body>
 </html>
