@@ -5,41 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>美味菜單 - 阿美素食</title>
     <style>
-        /* CSS 基本樣式 */
-        body { font-family: "Helvetica Neue", Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+        /* 基本樣式 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f8f9fa; color: #333; transition: 0.3s; }
         
-        /* 導覽列 */
-        nav { background: #2d5a27; color: white; padding: 15px 0; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        /* 導覽區 */
+        nav { background: #2d5a27; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 1.1rem; }
         
-        .container { max-width: 500px; margin: auto; padding: 20px; }
+        .container { max-width: 500px; margin: 20px auto; padding: 0 15px; }
 
-        /* 放大按鈕 */
-        .zoom-btn { background: #e74c3c; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; display: block; margin: 0 auto 20px auto; font-weight: bold; }
+        /* 字體放大按鈕 */
+        .zoom-control { text-align: center; margin-bottom: 20px; }
+        .zoom-btn { background: #e74c3c; color: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-size: 1rem; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
-        /* 菜單項目卡片 */
-        .menu-category { color: #2d5a27; font-size: 1.2rem; font-weight: bold; margin: 25px 0 10px 0; border-bottom: 2px solid #2d5a27; padding-bottom: 5px; }
-        .menu-item { display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .price { color: #d35400; font-weight: bold; }
+        /* 菜單分類與項目 */
+        .menu-category { color: #2d5a27; font-size: 1.3rem; font-weight: bold; margin: 25px 0 10px; border-left: 5px solid #2d5a27; padding-left: 10px; }
+        .menu-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: white; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .price { color: #d35400; font-weight: bold; font-size: 1.2rem; }
+        .seasonal { font-size: 0.8rem; color: #e67e22; background: #fef5e7; padding: 2px 6px; border-radius: 4px; margin-left: 5px; border: 1px solid #fbdcbb; }
 
-        /* 大字模式 CSS (給長輩用的) */
+        /* 大字模式 (由 JS 切換) */
         .large-font .menu-item { font-size: 1.6rem; padding: 20px; }
+        .large-font .price { font-size: 1.8rem; }
         .large-font .menu-category { font-size: 2rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">首頁</a> | 
-        <a href="menu.html">菜單</a> | 
-        <a href="location.html">導航</a> | 
+        <a href="index.html">首頁</a>
+        <a href="menu.html">菜單</a>
+        <a href="location.html">導航</a>
         <a href="about.html">關於</a>
     </nav>
 
     <div class="container">
-        <button class="zoom-btn" onclick="document.body.classList.toggle('large-font')">🔍 切換大字模式</button>
+        <div class="zoom-control">
+            <button class="zoom-btn" onclick="document.body.classList.toggle('large-font')">🔍 點我切換大字模式</button>
+        </div>
 
-        <h2 style="text-align:center;">美味菜單</h2>
+        <h2 style="text-align:center; color: #2d5a27;">美味菜單</h2>
 
         <div class="menu-category">🍜 麵類系列</div>
         <div class="menu-item"><span>湯(乾)麵 / 米粉</span><span class="price">$45</span></div>
@@ -50,20 +55,21 @@
         <div class="menu-item"><span>什錦麵</span><span class="price">$90</span></div>
 
         <div class="menu-category">🥗 精選小菜</div>
-        <div class="menu-item"><span>豆包</span><span class="price">$20</span></div>
-        <div class="menu-item"><span>素肉飯</span><span class="price">$35</span></div>
+        <div class="menu-item"><span>素圓 (手工香菇)</span><span class="price">$40</span></div>
+        <div class="menu-item"><span>涼圓 <span class="seasonal">夏日限定</span></span><span class="price">$35</span></div>
+        <div class="menu-item"><span>豆包 (單個)</span><span class="price">$20</span></div>
+        <div class="menu-item"><span>素肉飯</span><span class="price">$30</span></div>
         <div class="menu-item"><span>燙青菜</span><span class="price">$35</span></div>
-        <div class="menu-item"><span>素圓</span><span class="price">$40</span></div>
         <div class="menu-item"><span>外帶素粽</span><span class="price">$50</span></div>
 
         <div class="menu-category">🥣 熱騰騰湯品</div>
-        <div class="menu-item"><span>豆腐/豆雞/豆皮/豆包/菜頭湯</span><span class="price">$35</span></div>
+        <div class="menu-item"><span>豆腐/豆包/菜頭湯等</span><span class="price">$35</span></div>
         <div class="menu-item"><span>什錦湯</span><span class="price">$55</span></div>
 
-        <div class="menu-category">🥡 外帶大量訂購</div>
-        <div class="menu-item"><span>豆包 (10入)</span><span class="price">$200</span></div>
-        <div class="menu-item"><span>涼圓 (10入)</span><span class="price">$350</span></div>
+        <div class="menu-category">🥡 外帶大量預訂</div>
+        <div class="menu-item"><span>涼圓 (10入) <span class="seasonal">夏日限定</span></span><span class="price">$350</span></div>
         <div class="menu-item"><span>素圓 (10入)</span><span class="price">$400</span></div>
+        <div class="menu-item"><span>豆包 (10入)</span><span class="price">$200</span></div>
     </div>
 
 </body>
